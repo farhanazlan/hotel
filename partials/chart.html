@@ -1,0 +1,78 @@
+<div class="row" ng-init="fetch()">
+	<div class="col-md-8 col-md-offset-2">
+		<button type="button" class="btn btn-primary pull-left" ui-sref="home"><i class="fa fa-arrow-left"></i> Back</button>
+		<table class="table table-bordered table-striped" style="margin-top:10px;">
+			<h3 class="page-header text-center">Reservation form</h3>
+			
+
+			<div >
+				<div class="panel-body">
+					<div class="form-group">
+						<label>Alias ID:</label>
+						<input type="text" class="form-control" ng-model="cID" placeholder="please neter your ID">
+					</div>
+					<div class="form-group">
+						<label>fullname</label>
+						<input type="text" class="form-control" ng-model="cpassword" placeholder="enter your fullname">
+					</div>
+					<div class="form-group">
+						<label>Type of room:</label>
+						<input type="text" class="form-control" ng-model="cfullname" placeholder="select your type of room" list="browsers">
+					
+						<datalist id="browsers">
+						  <option value="single RM100">
+						  <option value="double RM200">
+						  <option value="Queen RM300">
+						  <option value="master suite RM500">
+						  <option value="mini suite RM350">
+						   <option value="standard family suite RM650">
+						</datalist>
+
+					</div>
+					<div class="form-group">
+						<label>Date</label>
+						<input type="date" class="form-control" ng-model="cphone" placeholder="without - symbol,eg. XXXXXXXXXX">
+					</div>
+					<div class="form-group">
+						<label>Time:</label>
+						<input type="time" class="form-control" ng-model="cemail" placeholder="enter your time">
+					</div>
+				
+					<button type="button" class="btn btn-primary" ng-click="add()"><i class="fa fa-save"></i> Save</button>
+					<button type="button" class="btn btn-primary pull-right" ui-sref="home"><i class="fa fa-arrow-left"></i> Back</button>
+				</div>
+			</div>
+
+
+			<!--
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>fullname</th>   
+					<th>type of room</th>
+					<th>date</th>
+					<th>time</th>
+					<th>Total Pay</th>
+					<th>Status</th>
+                </tr>
+            </thead>
+			<tbody>
+				<tr ng-repeat="member in members">
+					<td style="text-align:center">
+						<button type="button" class="btn btn-danger" ui-sref="delete({member: member})"> <i class="fa fa-trash"></i></button>
+					</td>
+					<td>test</td>
+					<td>{{ member.custAlias }}</td>
+					<td>{{ member.pizzaName }}</td>
+					<td>{{ member.quantity }}</td>
+					<td>{{ 'RM ' + member.totalPay }}</td>
+					<td>{{ member.status }}</td>
+					<td style="text-align:center">
+						<button type="button" class="btn btn-primary" ui-sref="order({member: member})"> <i class="fa fa-edit"></i> Place Order</button>
+					</td>
+				</tr>
+			</tbody>
+		-->
+		</table>	
+	</div>
+</div>
