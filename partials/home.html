@@ -24,48 +24,19 @@
                     <th>Availability</th>
 				</tr>
 				<!-- list type of room-->
-				<tr>
-					<th>single</th>   
-					<th>100</th>
-                    <th>yes</th>
-				</tr>
-				<tr>
-					<th>double</th>   
-					<th>200</th>
-                    <th>yes</th>
-				</tr>
-				<tr>
-					<th>Queen</th>   
-					<th>300</th>
-                    <th>yes</th>
-				</tr>
-				<tr>
-					<th>master suite</th>   
-					<th>500</th>
-                    <th>yes</th>
-				</tr>
-				<tr>
-					<th>mini suite</th>   
-					<th>350</th>
-                    <th>yes</th>
-				</tr>
-				<tr>
-					<th>standard family suite</th>   
-					<th>650</th>
-                    <th>yes</th>
-				</tr>
+				
 				
 			</thead>
-			<!--
 			<tbody>
-				<tr>
-					<th>Type of room</th>   
-					<th>Price room (RM)</th>
-                    <th>Availability</th>
-                </tr>
+				<tr ng-repeat="Type of room">
+					<td>{{ type_room.name}}</td>
+					<td>{{ type_room.price }}</td>
+					<td>{{ type_room.availabillity }}</td>
+					<td style="text-align:center">
+						<button type="button" class="btn btn-success" ui-sref="edit({member: member})"><i class="fa fa-edit"></i> Add to Chart</button> 
+					</td>
+				</tr>
 			</tbody>
-			-->
-		
 		</table>	
 	</div>
 </div>
